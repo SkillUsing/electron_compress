@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>中财社-压缩</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="comperss.css">
+</head>
+
+<body>
+    <div class="mian">
+        <!-- 导航头部 -->
+        <div class="main_nav">
+            <!-- <div class="nav_div">
+                <span>返回</span>
+            </div> -->
+            <ul class="nav_ul">
+                <li class="nav_hovst_li">视频压缩</li>
+                <!-- <li>图片压缩</li>
+                <li>PDF压缩</li>
+                <li>Word压缩</li>
+                <li>PPT压缩</li> -->
+            </ul>
+        </div>
+        <!-- 详情部分 -->
+        <div class="tab_con">
+            <!-- 视频压缩 -->
+            <div class="tab_li_con" style="display: block;">
+                <!-- 视频压缩 -->
+                <div id="tab_con_details">
+                    <div style="width: 300px; text-align: center;">
+                        <p class="con_title">视频压缩</p>
+                        <p>支持MP4、WAV、AVI、FLV、MKV格式</p>
+                        <button class="con_buttom" onclick="Add_Files()"> <span>+</span> &nbsp; 添加文件</button>
+                    </div>
+                </div>
+                <div id="vide_table_details">
+                    <table>
+                        <thead class="table_title">
+                            <tr style=" border-bottom: 1px solid #f0f0f0;">
+                                <td>编号</td>
+                                <td>文件名称</td>
+                                <td>文件格式</td>
+                                <td>进度</td>
+                                <td>删除</td>
+                            </tr>
+                        </thead>
+                        <tbody id="listShow">
+                            <tr>
+                                <td>1111</td>
+                                <td><span id="cFile"></span></td>
+                                <td>MP4</td>
+                                <td>文件大小</td>
+                                <td>输出分辨率</td>
+                                <td>
+                                    <meter id="cMeter" value="0" min="0" max="100"></meter>
+                                </td>
+                                <td>
+                                    <span style="color: red; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  font-size: 18px;">X</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="footer container-fluid">
+                        <div class="row">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_li_con">图片压缩</div>
+            <div class="tab_li_con">PDF压缩</div>
+            <div class="tab_li_con">Word压缩</div>
+            <div class="tab_li_con">PPT压缩</div>
+        </div>
+        <!-- 底部 -->
+        <div class="main_foot">
+            <div class="foot_div_left">
+                <ul class="foot_ul">
+                    <li onclick="Add_Files()" style="cursor: pointer;">
+                        <label style="cursor: pointer;">添加文件</label>
+                    </li>
+                    <!-- <li>
+                        <span>添加文件夹</span>
+                    </li> -->
+                    <li id="clearList" style="cursor: pointer;">
+                        <label style="cursor: pointer;">清空列表</label>
+                    </li>
+                    <!-- <li>
+                        <span>历史记录</span>
+                    </li> -->
+                </ul>
+                <div style="padding-left: 5px;">
+                    <span>解码选项：</span>
+                    <label><input type="radio" name="radio" id="isCpu" checked  />&nbsp;&nbsp;使用Cpu</label>
+                    <label><input type="radio" name="radio" id="isGpu" />&nbsp;&nbsp;使用Gpu</label>
+                    <label class="h5" style="margin-left: 10px;">编码模式</label> &nbsp;
+                    <select id="codeType">
+                        <option>h.264</option>
+                        <option>h.265</option>
+                     </select>
+                    <!-- <span style="margin-left: 30px;">输出格式：</span>
+                    <input type="radio" name="radio1" checked /> -->
+                    <!-- <span>保持原有格式</span>
+                    <input type="radio" name="radio1" />
+                    <span>MP4</span> -->
+                </div>
+                <div style="padding-left: 5px;">
+                    <span>输出路径：</span>
+                    <input id="oFile" type="text" /> <button id="o">选择一个输出目录</button>
+                </div>
+            </div>
+            <div class="foot_div_right">
+                <button id="startCompress">开始压缩</button>
+            </div>
+        </div>
+    </div>
+    <script src="./compress.js"></script>
+
+</html>
