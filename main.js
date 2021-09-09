@@ -263,6 +263,9 @@ function StartCompress(event, videoInput, videoOutput) {
         //     "-c:v copy"
         // ])
         //.videoCodec("hevc_nvenc")
+        .inputOption([
+            "-deinterlace"
+        ])
         .videoCodec(vcode)
         .audioCodec("aac")
         .outputOptions([
