@@ -4,6 +4,7 @@ Simple and efficient compression software
 
 1. electron
 2. ffmpeg
+3. nodeJs
 
 # Use
 
