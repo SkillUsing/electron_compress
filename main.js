@@ -268,11 +268,11 @@ function StartCompress(event, videoInput, videoOutput) {
         ])
         .videoCodec(vcode)
         .audioCodec("aac")
-        .outputOptions([
-            "-crf 0",
+        //.outputOptions([
+            //"-crf 0",
             // "-b:v 1M",
             // "-maxrate 1M"
-        ])
+        //])
         .output(outPutFile)
         .on('start', (commandLine) => {
 
