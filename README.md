@@ -6,7 +6,14 @@ Simple and efficient compression software
 2. ffmpeg
 3. nodeJs
 
-# Use
+# China mirror image acceleration
+
+```bash
+#macOS / Linux:
+export ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/"
+#windows(PowerShell)
+setx ELECTRON_MIRROR "https://npmmirror.com/mirrors/electron/"
+```# Use
 
 1. In Windows, decompress libs/windows/*.zip
 
