@@ -13,7 +13,9 @@ Simple and efficient compression software
 export ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/"
 #windows(PowerShell)
 setx ELECTRON_MIRROR "https://npmmirror.com/mirrors/electron/"
-```# Use
+```
+
+# Use
 
 1. In Windows, decompress libs/windows/*.zip
 
